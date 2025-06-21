@@ -11,9 +11,13 @@ class RiwayatPeriksaController extends Controller
 {
     public function index() 
     { 
-        $no_rm = Auth::user()->no_rm; 
-        $janjiPeriksas = JanjiPeriksa::where('id_pasien', Auth::user()->id)->get(); 
- 
+            $no_rm = Auth::user()->no_rm; 
+
+        // Ambil janji periksa pasien yang sudah diperiksa (punya relasi ke tabel periksa)
+        $janjiPeriksas = JanjiPeriksa::where('id_pasien', Auth::user()->id)
+            ->whereHas('periksa') // hanya tampilkan yang sudah diperiksa
+            ->get(); 
+
         return view('pasien.riwayat-periksa.index')->with([ 
             'no_rm' => $no_rm, 
             'janjiPeriksas' => $janjiPeriksas, 

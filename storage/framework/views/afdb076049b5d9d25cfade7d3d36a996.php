@@ -113,7 +113,7 @@
                                 <tr> 
                                     <th scope="row" class="align-middle text-start"><?php echo e($loop->iteration); ?></th> 
                                     <td class="align-middle text-start"> 
-                                        <?php echo e($janjiPeriksa->jadwalPeriksa->dokter->poli); ?></td> 
+                                        <?php echo e($janjiPeriksa->jadwalPeriksa->dokter->poli->nama); ?></td> 
                                     <td class="align-middle text-start"> 
                                         <?php echo e($janjiPeriksa->jadwalPeriksa->dokter->nama); ?></td> 
                                     <td class="align-middle text-start"><?php echo e($janjiPeriksa->jadwalPeriksa->hari); ?></td> 
@@ -139,7 +139,7 @@
                                             <div class="modal fade bd-example-modal-lg" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalTitle" aria-hidden="true"> 
                                                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document"> 
                                                     <div class="modal-content"> 
-                                                        <!-- Modal Header --> 
+                                                        
                                                         <div class="modal-header"> 
                                                             <h5 class="modal-title font-weight-bold" id="riwayatModalLabel"> 
                                                                 Detail Riwayat Pemeriksaan 
@@ -150,7 +150,7 @@
                                                             </button> 
                                                         </div> 
  
-                                                        <!-- Modal Body --> 
+                                                        
                                                         <div class="modal-body"> 
                                                             <ul class="list-group"> 
                                                                 <li class="list-group-item"> 

@@ -12,6 +12,7 @@ use App\Http\Controllers\Dokter\MemeriksaController;
 use App\Http\Controllers\Pasien\JanjiPeriksaController;
 use App\Http\Controllers\Dokter\JadwalPeriksaController;
 use App\Http\Controllers\Pasien\RiwayatPeriksaController;
+use App\Http\Controllers\Pasien\DashboardPasienController;
 
 
 Route::get('/', function () {
@@ -58,9 +59,7 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::middleware('role:pasien')->prefix('pasien')->group(function () {
-        Route::get('/dashboard', function () {
-            return view('dashboard');
-        })->name('pasien.dashboard');
+        Route::get('/dashboard', [DashboardPasienController::class, 'index'])->name('pasien.dashboard');
 
         Route::prefix('janji-periksa')->group(function(){ 
             Route::get('/', [JanjiPeriksaController::class, 'index'])->name('pasien.janji-periksa.index'); 

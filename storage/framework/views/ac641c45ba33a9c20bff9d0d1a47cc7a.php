@@ -24,7 +24,7 @@
                         </h2> 
                     </header> 
  
-                    
+                   
                     <table class="table mt-6 overflow-hidden rounded table-hover"> 
                         <thead class="thead-light"> 
                             <tr> 
@@ -44,7 +44,7 @@
                                 <tr> 
                                    <th scope="row" class="align-middle text-start"><?php echo e($loop->iteration); ?></th> 
                                     <td class="align-middle text-start"> 
-                                        <?php echo e($janjiPeriksa->jadwalPeriksa->dokter->poli); ?></td> 
+                                        <?php echo e($janjiPeriksa->jadwalPeriksa->dokter->poli->nama); ?></td> 
                                     <td class="align-middle text-start"> 
                                         <?php echo e($janjiPeriksa->jadwalPeriksa->dokter->nama); ?></td> 
                                     <td class="align-middle text-start"><?php echo e($janjiPeriksa->jadwalPeriksa->hari); ?></td> 
@@ -85,7 +85,7 @@
                                                             </button> 
                                                         </div> 
  
-                                                        <!-- Modal Body --> 
+                                                       
                                                         <div class="modal-body"> 
                                                             <ul class="list-group"> 
                                                                 <li class="list-group-item"> 
@@ -110,7 +110,7 @@
                                                                 </li> 
                                                             </ul> 
  
-                                                            <!-- Highlight Nomor Antrian --> 
+                                                            
                                                             <div class="mt-4 text-center"> 
                                                                 <div class="mb-2 h5 font-weight-bold">Nomor Antrian Anda 
                                                                 </div> 
